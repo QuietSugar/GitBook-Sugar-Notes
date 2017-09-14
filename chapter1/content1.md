@@ -2,16 +2,14 @@
 
 
 * 增加字段
-> ALTER TABLE 表名 ADD 字段名  NUMERIC \(18, 0\);
+> `ALTER TABLE 表名 ADD 字段名  NUMERIC (18, 0);`
 * 删除字段
-> ALTER TABLE 表名 DROP IF EXISTS 字段名;
+> `ALTER TABLE 表名 DROP IF EXISTS 字段名;`
 * 改变字段类型
-> ALTER TABLE 表名 ALTER 字段名  TYPE text;
+> `ALTER TABLE 表名 ALTER 字段名  TYPE text;`
 
  
-## 2.系统
-* 查看数据库连接情况（postgres测试可用）  
-> select \* from pg\_stat\_activity
+
 
 
 
