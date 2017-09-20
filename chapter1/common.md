@@ -19,6 +19,20 @@
 * 创建一个唯一索引，多字段联合索引
 > `CREATE UNIQUE INDEX 索引名 ON 表名(字段1, 字段2);`
 
+## 3.查询重复数据
+
+```
+SELECT
+	DISTINCT p1.*
+FROM
+	SYS_FILE p1,
+	SYS_FILE p2
+WHERE 
+AND p1.USERID = p2.USERID
+AND p1.TRUSTEEID = p2.TRUSTEEID
+AND p1.PARENTID = p2.PARENTID 
+```
+
 
 
 
