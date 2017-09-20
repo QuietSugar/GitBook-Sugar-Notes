@@ -21,6 +21,14 @@
 
 ## 3.查询重复数据
 
+```javascript
+
+var canvas = document.getElementById("canvas");
+
+var context = canvas.getContext("2d");
+
+```
+
 ```
 SELECT
 	DISTINCT p1.*
