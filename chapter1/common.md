@@ -21,24 +21,18 @@
 
 ## 3.查询重复数据
 
-```javascript
-
-var canvas = document.getElementById("canvas");
-
-var context = canvas.getContext("2d");
-
-```
-
-```
-SELECT
-	DISTINCT p1.*
+查询字段1，字段2，字段3都重复的记录，并且只显示一条
+```sql
+SELECT DISTINCT
+	t1.*
 FROM
-	SYS_FILE p1,
-	SYS_FILE p2
-WHERE 
-AND p1.USERID = p2.USERID
-AND p1.TRUSTEEID = p2.TRUSTEEID
-AND p1.PARENTID = p2.PARENTID 
+	表 t1,
+	表 t2
+WHERE
+
+AND t1.字段1 = p2.字段1
+AND t1.字段2 = p2.字段2
+AND t1.字段3 = p2.字段3
 ```
 
 
