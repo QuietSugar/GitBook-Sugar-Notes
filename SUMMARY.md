@@ -6,3 +6,6 @@
     * [common](database/sql/common.md)
     * [postgres](database/sql/postgres.md)
 * [MyBatis](mybatis/README.md)
+  * [generator插件](mybatis/mybatis-generator/README.md)  
+    * [插件模板-引导](mybatis/mybatis-generator/generatorConfig.xml)
+
