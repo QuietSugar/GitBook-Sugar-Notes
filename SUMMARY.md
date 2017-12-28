@@ -8,4 +8,8 @@
 * [MyBatis](mybatis/README.md)
   * [generator插件](mybatis/mybatis-generator/README.md)  
     * [插件模板-引导](mybatis/mybatis-generator/generatorConfig.xml)
+* [Shiro](shiro/README.md)
+  * [shiro的web环境配置](shiro/applicationContext-shiro.xml)  
+
+
 
