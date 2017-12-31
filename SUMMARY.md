@@ -1,6 +1,10 @@
 # Summary
 
 * [前言](README.md)
+* [软件配置](softSetting/README.md)
+  * [IDEA设置](softSetting/IDEA/README.md)
+    * [初始化化配置](softSetting/IDEA/init.md)
+    * [个性化配置](softSetting/IDEA/person.md)
 * [数据库](database/README.md)
   * [Mysql数据库](database/mysql/README.md)
     * [安装](database/mysql/install.md)
