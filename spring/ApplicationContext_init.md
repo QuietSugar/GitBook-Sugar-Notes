@@ -31,11 +31,98 @@ ac2.getBean("beanId");
 
 #### 5.实现接口ApplicationContextAware 
 > 说明：实现该接口的setApplicationContext(ApplicationContext context)方法，并保存ApplicationContext 对象。 Spring初始化时，会通过该方法将ApplicationContext对象注入。
+> 例子1:
 
+```java
+package com.miniframe.test;
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
+
+/**
+ * Maybe has infinite possibilities
+ *
+ * @author Created by Maybe on 2018/1/6
+ */
+
+@Component
+public class SpringContextUtil implements ApplicationContextAware {
+    private static ApplicationContext applicationContext; // Spring应用上下文环境
+    /*
+    * 实现了ApplicationContextAware 接口，必须实现该方法；
+    *通过传递applicationContext参数初始化成员变量applicationContext
+    */
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        SpringContextUtil.applicationContext = applicationContext;
+    }
+
+    public static ApplicationContext getApplicationContext() {
+        return applicationContext;
+    }
+
+    @SuppressWarnings("unchecked")
+    public static <T> T getBean(String name) throws BeansException {
+        return (T) applicationContext.getBean(name);
+    }
+}
+```
+> 例子2
+
+````java
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
+
+/**
+ * SpringContext持有类
+ * Created by Maybe on 2017/8/22
+ * Maybe has infinite possibilities
+ */
+@Component
+public class SpringContextHolder implements ApplicationContextAware, DisposableBean {
+    private static ApplicationContext applicationContext;
+
+    /**
+     * 取得存储在静态变量中的ApplicationContext.
+     */
+    @Override
+    public void setApplicationContext(ApplicationContext context) throws BeansException {
+        try {
+            applicationContext = context;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 从静态变量applicationContext中取得Bean, 自动转型为所赋值对象的类型.
+     */
+    public static <T> T getBean(String name) {
+        return (T) applicationContext.getBean(name);
+    }
+
+    public static String[] getBeanNamesForType(Class<?> type) {
+        return applicationContext.getBeanNamesForType(type);
+    }
+
+    /**
+     * 实现DisposableBean接口, 在Context关闭时清理静态变量.
+     */
+    @Override
+    public void destroy() throws Exception {
+        applicationContext = null;
+    }
+}
+````
 
 #### 附录
-在web应用中一般用ContextLoaderListener加载webapplication,如果需要在action之外或者control类之外获取webapplication思路之一是，单独写个类放在static变量中， 类似于：
-```
+> 在web应用中一般用ContextLoaderListener加载webapplication,如果需要在action之外或者control类之外获取webapplication思路之一是，单独写个类放在static变量中， 类似于：
+
+```java
 public class AppContext {
   private static AppContext instance;
   private Abstract  ApplicationContext appContext;
@@ -65,7 +152,7 @@ public class AppContext {
 </listener>
 ```
 其中SpringInit实现接口ServletContextListener ：
-```
+```java
 package com.ibatis.jpetstore.util;
  
 import javax.servlet.ServletContextEvent;
@@ -90,7 +177,7 @@ public class SpringInit implements ServletContextListener {
 }
 ```
 在其中的一个bean的构造里SpringInit获取applicationcontext,代码：
-```
+```java
 public OrderBean() {
     this{(AccountService) SpringInit.getApplicationContext().getBean("accountService");
     (OrderService) SpringInit.getApplicationContext().getBean("orderService") );            
