@@ -14,12 +14,12 @@
     * [postgres](database/sql/postgres.md)
 * [MyBatis](mybatis/README.md)
   * [generator插件](mybatis/mybatis-generator/README.md)  
-    * [插件模板-引导](mybatis/mybatis-generator/generatorConfig.xml)
+    * [插件模板-引导](mybatis/mybatis-generator/generatorConfig.xml.md)
 * [Spring](spring/README.md) 
   * [Spring国际化-MessageSource](spring/MessageSource.md) 
   * [ApplicationContext的5种获取方式](spring/ApplicationContext_init.md)   
 * [Shiro](shiro/README.md)
-  * [shiro的web环境配置](shiro/applicationContext-shiro.xml)  
+  * [shiro的web环境配置](shiro/applicationContext-shiro.xml.md)  
 
 
 
