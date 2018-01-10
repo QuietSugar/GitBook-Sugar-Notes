@@ -1,3 +1,6 @@
+参考网址
+[postgres9.5中文文档](http://www.postgres.cn/docs/9.5/functions-json.html) 
+
 ## 1.系统
 * 查看数据库连接情况（postgres测试可用）  
 > `select * from pg_stat_activity`
