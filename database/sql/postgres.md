@@ -19,3 +19,34 @@ FROM
 
 ```
 
+## 3.Json相关
+#### 3.1解析json数组
+> 将一个json数组字符串转化成列
+```sql
+SELECT
+	json_array_elements (user_json) -> 'username' username,
+	json_array_elements (user_json) -> 'age' age
+FROM
+	(
+		SELECT
+			'[{"username": "张三", "age": 10}, {"username": "李四", "age": 20}]' :: json user_json
+	) AS t1
+```
+
+> 实例1：
+多条也会解析成列表，
+```sql
+SELECT
+	json_array_elements (lv_num_json) -> 'id' ID,
+	json_array_elements (lv_num_json) -> 'rhname' RHNAME
+FROM
+	(
+		SELECT
+			rights_holder_list :: json lv_num_json
+		FROM
+			copyright_certificate_apply
+		WHERE
+			ID = '97fb46ab8e154858a6ad0fc2e4b6e6d1'
+	) AS t1
+```
+
