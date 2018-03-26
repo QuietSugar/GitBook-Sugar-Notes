@@ -52,4 +52,11 @@ FROM
 			ID = '97fb46ab8e154858a6ad0fc2e4b6e6d1'
 	) AS t1
 ```
-
+## 4.行合并
+```sql
+SELECT
+    '("' || array_to_string(
+        ARRAY (SELECT NAME FROM hs_user),
+        '", "'
+    ) || '")';
+```
