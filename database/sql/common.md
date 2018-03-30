@@ -6,6 +6,8 @@
   > `ALTER TABLE 表名 DROP IF EXISTS 字段名;`
 * 改变字段类型
   > `ALTER TABLE 表名 ALTER 字段名  TYPE text;`
+* 改变字段名
+> `ALTER TABLE 表名 RENAME 字段名 TO 新字段名;`
 
 ## 2.约束
 
