@@ -26,7 +26,8 @@
 * [Docker](docker/README.md)
   * [Docker基础运用](docker/step1.md)  
 * [Linux](linux/README.md)
-  * [更改为阿里云的源](linux/yumUpdate.md)  
+  * [更改为阿里云的源](linux/yumUpdate.md)
+  * [Linux的shell技巧](linux/shell.md)  
 
 
 
