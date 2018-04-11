@@ -7,6 +7,8 @@
     * [个性化配置](softSetting/IDEA/person.md)
     * [spring相关配置](softSetting/IDEA/idea-spring.md)  
   * [eclipse设置](softSetting/eclipse/README.md)
+    * [初始化配置](softSetting/eclipse/install/README.md) 
+      * [init配置](softSetting/eclipse/install/init.md) 
     * [插件](softSetting/eclipse/plugins/README.md) 
       * [svn](softSetting/eclipse/plugins/install.md)  
 * [数据库](database/README.md)  
