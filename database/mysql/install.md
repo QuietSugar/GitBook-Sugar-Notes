@@ -53,6 +53,11 @@ default-storage-engine=INNODB
 mysql  -u root
 
 ### 1.7修改root密码
-SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');
+查看用户
+> `select host,user,password from user;`  
+
+修改密码
+> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');    
+
 > 5.7版本 (未测试)
 update mysql.user set authentication_string=password('new_password') where user='root' and Host ='localhost'
