@@ -3,7 +3,7 @@
 * [前言](README.md)
 * [软件配置](softSetting/README.md)
   * [IDEA设置](softSetting/IDEA/README.md)
-    * [初始化化配置](softSetting/IDEA/init.md)
+    * [安装和初始化](softSetting/IDEA/init.md)
     * [个性化配置](softSetting/IDEA/person.md)
     * [spring相关配置](softSetting/IDEA/idea-spring.md)  
   * [eclipse设置](softSetting/eclipse/README.md)
