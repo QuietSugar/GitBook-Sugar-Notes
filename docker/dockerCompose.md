@@ -305,13 +305,18 @@ links:
 这个标签用于配置日志服务。格式如下：
 ```
 logging:
+  ## 默认是json-file，none表示不输出
   driver: syslog
   options:
     syslog-address: "tcp://192.168.0.42:123"
+    ## docker 的写法 --log-opt max-size=10m --log-opt max-file=3
+    max-size: "10m"
+    max-file: "3"
 ```
     
 默认的driver是json-file。只有json-file和journald可以通过docker-compose logs显示日志，其他方式有其他日志查看方式，但目前Compose不支持。对于可选值可以使用options指定。有关更多这方面的信息可以阅读官方文档：
 https://docs.docker.com/engine/admin/logging/overview/
+TODO :[使用 Fluentd 管理 Docker 日志](https://segmentfault.com/a/1190000000730444)
 
 ##### 2.1.17 pid
 ```
@@ -498,6 +503,6 @@ tty: true
 
 4. 参考文章
 
-https://www.jianshu.com/p/2217cfed29d7
+[Docker Compose 配置文件详解](https://www.jianshu.com/p/2217cfed29d7)  
 
-http://www.dockerinfo.net/4257.html
+[使用Docker-Compose编排容器](http://www.dockerinfo.net/4257.html )
