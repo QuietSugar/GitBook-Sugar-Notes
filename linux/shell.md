@@ -48,3 +48,6 @@
 `javac`
 `java`
 > 以上命令输出的是输出的信息是到stderr，而不是stdout
+
+#### Rule of silence[缄默原则]
+
