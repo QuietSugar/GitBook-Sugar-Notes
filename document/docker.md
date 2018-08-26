@@ -75,3 +75,19 @@ dashboard                      latest              87b41b2f47d7        3 minutes
 #### 运行
 `docker run -p 8080:8080 --name dashboard dashboard`
 
+
+### 3.批量保存docker镜像
+```
+#!/bin/bash
+
+## 将本机上面的所有镜像保存成文件
+docker images > /root/maybe/images.txt
+awk '{print $1}' /root/maybe/images.txt > /root/maybe/images_cut.txt
+while read LINE
+do
+#echo $LINE
+docker save $LINE > /root/maybe/$LINE.tar
+echo ok
+done < /root/maybe/images_cut.txt
+echo finish
+```
