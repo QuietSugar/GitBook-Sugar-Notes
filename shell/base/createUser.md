@@ -1,3 +1,4 @@
+```
 #!/bin/bash
 
 #用户名
@@ -99,3 +100,4 @@ jq -n -c -M \
 else
 echo jq not exist
 fi
+```
