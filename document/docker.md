@@ -37,6 +37,11 @@ rm -rf /var/lib/docker
 
 ## 搜索已经安装的docker 安装包
 yum list installed|grep docker
+# 显示如下
+# containerd.io.x86_64                 1.2.0-1.0.beta.0.el7           @docker-ce-test
+# docker-ce.x86_64                     2:18.09.0.ce-0.4.tp4.el7       @docker-ce-test
+# docker-ce-cli.x86_64                 18.09.0.ce-0.4.tp4.el7         @docker-ce-test
+
 ## 或者使用该命令
 rpm -qa|grep docker
 
