@@ -1,3 +1,4 @@
+###  安装eclipse的svn插件
 #### 准备
 svn客户端（小乌龟）版本：TortoiseSVN 1.9.7
 eclipse 版本： Oxygen.1a Release (4.7.1a)(可以去我的百度云下载)

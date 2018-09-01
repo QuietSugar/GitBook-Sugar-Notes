@@ -1,1 +1,0 @@
-安装eclipse的svn插件
