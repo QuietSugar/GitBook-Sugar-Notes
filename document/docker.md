@@ -1,33 +1,46 @@
 ## Docker
 
-### 1.安装和卸载
+### 1.Centos环境下的安装和卸载
 
 #### 使用yum安装
+
+> 为了以防万一，可以先卸载docker
 ```
 # 安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的
 yum install -y yum-utils device-mapper-persistent-data lvm2
 
 # 设置yum源
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+# 可以使用以下的阿里云的源
+# yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
-## 以下可选
-# yum-config-manager --enable docker-ce-edge
-# yum-config-manager --enable docker-ce-test
-# yum-config-manager --disable docker-ce-edge
-# yum makecache fast
+# 更新 yum 缓存：
+yum makecache fast
 
-# 可以查看所有仓库中所有docker版本，并选择特定版本安装
-yum list docker-ce --showduplicates | sort -r
+# 安装 Docker-ce：
+yum -y install docker-ce
 
-# 安装docker
-yum install -y docker-ce
-
-# 初始化
-systemctl enable docker
+# 启动 Docker 后台服务
 systemctl start docker
 ```
 
 #### 使用yum卸载
+> 两种方式，选一个
+- 一通遍历，全部卸载
+```
+yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+```
+
+- 精准打击，一个一个卸载
 ```
 ## 首先停止docker
 systemctl stop docker
