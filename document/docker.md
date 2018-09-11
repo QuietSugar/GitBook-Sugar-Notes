@@ -5,6 +5,7 @@
 #### 使用yum安装
 
 > 为了以防万一，可以先卸载docker
+
 ```
 # 安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的
 yum install -y yum-utils device-mapper-persistent-data lvm2
