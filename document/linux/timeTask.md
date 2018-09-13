@@ -4,8 +4,8 @@
 > 配置文件在 `/etc/crontab`
 
 ### 用户定时任务
-> 配置文件在 `/var/spool/cron` 下，以用户名命名
-- 文件的每一行都是一个任务，格式是`minute hour day month week command`
+> 配置文件在 `/var/spool/cron` 下，以用户名命名  
+> 文件的每一行都是一个任务，格式是`minute hour day month week command`
 
 - minute： 表示分钟，可以是从0到59之间的任何整数。
 
@@ -29,7 +29,21 @@
 
 - 正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。
 
+### 示例
+```
+# 在/var/spool/cron/root 文件里面增加 下面一行
+* * * * * sh /root/script/test.sh
 
+# 创建脚本 /root/script/test.sh，内容如下
+
+#!/bin/bash
+
+source /etc/profile
+#测试脚本,将当前时间写入文件
+echo `date +"%Y-%m-%d %H:%M:%S"` >> /root/script/time.log
+
+## 结果：会向time.log里面每分钟写入当前时间
+```
 
 
 

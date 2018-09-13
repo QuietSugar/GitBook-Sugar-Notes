@@ -1,3 +1,9 @@
 {
-    "plugins": ["toggle-chapters" ,  "splitter", "-sharing"]
+    "plugins": ["expandable-chapters-small" , "simple-page-toc" ,  "splitter", "-sharing"] ,
+    "pluginsConfig": {
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        }
+    }
 }

@@ -42,6 +42,7 @@ yum remove docker \
 ```
 
 - 精准打击，一个一个卸载
+
 ```
 ## 首先停止docker
 systemctl stop docker
