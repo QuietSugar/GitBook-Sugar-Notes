@@ -29,6 +29,7 @@
   * [shell基础](shell/shell.md)
 * [开源项目](openSourceProject/README.md)
   * [zheng](openSourceProject/zheng.md)
+  * [zhuishushenqi](openSourceProject/zhuishushenqi.md)
 * [软件配置](softSetting/README.md)
   * [IDEA设置](softSetting/IDEA/README.md)
     * [安装和初始化](softSetting/IDEA/init.md)
