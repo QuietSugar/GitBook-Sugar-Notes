@@ -58,6 +58,8 @@
 * [区块链](blockChain/README.md)
   * [超级账本](blockChain/fabric.md)
   * [第一个网络](blockChain/byfn.md)
+  * [卡夫卡](blockChain/kafka.md)
+  * [常用命令](blockChain/command.md)
 * [Git](git/README.md)
   * [Git安装](git/install.md)
   * [Git配置](git/init.md)

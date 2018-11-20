@@ -7,12 +7,11 @@
 - 在 IntelliJ IDEA 安装目录bin中找到 idea.exe.vmoptions 和 idea64.exe.vmoptions ，以文本格式打开并同时在两个文件最后追加 -javaagent:D:/JetbrainsCrack-2.6.2.jar。根据文件名和路径而定
 - 启动 IntelliJ IDEA , 输入如下激活码激活(激活码中内容可修改)。
 ```
-ThisCrackLicenseId-{
-"licenseId":"ThisCrackLicenseId",
+{"licenseId":"ThisCrackLicenseId",
 "licenseeName":"Sugar",
 "assigneeName":"Sugar",
 "assigneeEmail":"Sugar@163.com",
-"licenseRestriction":"For Rover12421 Crack, Only Test! Please support genuine!!!",
+"licenseRestriction":"By Rover12421 Crack, Only Test! Please support genuine!!!",
 "checkConcurrentUse":false,
 "products":[
 {"code":"II","paidUpTo":"2099-12-31"},
@@ -26,7 +25,10 @@ ThisCrackLicenseId-{
 {"code":"DC","paidUpTo":"2099-12-31"},
 {"code":"RM","paidUpTo":"2099-12-31"},
 {"code":"CL","paidUpTo":"2099-12-31"},
-{"code":"PC","paidUpTo":"2099-12-31"}
+{"code":"PC","paidUpTo":"2099-12-31"},
+{"code":"DB","paidUpTo":"2099-12-31"},
+{"code":"GO","paidUpTo":"2099-12-31"},
+{"code":"RD","paidUpTo":"2099-12-31"}
 ],
 "hash":"2911276/0",
 "gracePeriodDays":7,

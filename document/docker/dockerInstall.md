@@ -111,3 +111,19 @@ echo ok
 done < /root/maybe/images_cut.txt
 echo finish
 ```
+
+### 4.将docker从系统盘转移到数据盘
+```
+# 停止docker
+service docker stop
+# 在数据库创建目录
+mkdir /home/docker
+# 转移已存在的文件
+mv /var/lib/docker/* /home/docker/
+# 删除旧的目录
+rmdir /var/lib/docker
+# 建立软连接
+ln -s /home/docker/ /var/lib/
+# 启动docker
+service docker start
+```
