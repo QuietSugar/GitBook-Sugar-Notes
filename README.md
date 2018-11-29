@@ -42,4 +42,6 @@ docker run --name nginx -v /root/maybe/buildpace/note/GitBook-Sugar-Notes/html:/
 >  内容来源于网络,侵删  
 [docker搭建gitbook服务](https://www.cnblogs.com/xiaomingtx/p/5622514.html)  
 [gitbook插件学习 ](https://cnodejs.org/topic/575229332420978970d4a5f0)
+[gitbook插件学习 ](http://gitbook.zhangjikai.com/plugins.html)
 [综合教程](http://gitbook.zhangjikai.com/)
+

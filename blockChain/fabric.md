@@ -1,4 +1,6 @@
-###用户的生成
+# 目录
+<!-- toc -->
+## 用户的生成
 - 证书权限需要有权限才能进行操作
 - cli向CA发送register，得到用户名和密码
 使用csr文件，用户名和密码进行enroll操作，获得了证书
@@ -40,5 +42,21 @@ Users 普通用户的个数，不包括admin，必定有一个admin
 - 读集：记录的是key的当前值，这个值在commit阶段，会进行比对，如果读集中的每个key版本和世界状态中该key的版本相同，则有效，若读写集中还包含query-info，还得保证这个结果一样
 - 写集：更新值
 
+## 详细配置
+HyperLedger Fabric基于zookeeper和kafka集群配置解析
+http://www.mamicode.com/info-detail-2157698.html
+
+### 详细配置
+- 创世块配置  AbsoluteMaxBytes: 99 MB。设置最大的区块大小。每个区块最大字节数（不包括头部）。
+- 卡夫卡配置 KAFKA_MESSAGE_MAX_BYTES 应该大于上面那个配置
+
+- 创世块配置  PreferredMaxBytes: 512 KB 设置每个区块建议的大小。Kafka对于相对小的消息提供更高的吞吐量；区块大小最好不要超过1MB。
+
+### zookeeper
+- zookeeper集群将会是3个、5个或7个，它的值需要是一个奇数避免split-brain情况，同时选择大于1的值为了避免单点故障。超过7个zookeeper servers会被认为overkill
+
+### "数据持久化"
+- https://hyperledger-fabric.readthedocs.io/en/latest/build_network.html#a-note-on-data-persistence
 
 
+## last
